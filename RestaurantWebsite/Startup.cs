@@ -1,55 +1,59 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RestaurantWebsite.Models;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace RestaurantWebsite
 {
     public class Startup
     {
-        public IConfiguration configRoot
-        {
-            get;
-        }
         public Startup(IConfiguration configuration)
         {
-            configRoot = configuration;
+            Configuration = configuration;
         }
+
+        public IConfiguration Configuration { get; }
+
+
+        // This method gets called by the runtime.
+        // Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
             services.AddControllersWithViews();
+
+            // Added the following 2 lines of code for assignment3!!!!!!!!
+            services.AddDbContext<FoodContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("FoodContext")));
+
+
+            //URLs lowercase and end with a trailing slash
             services.AddRouting(options => {
                 options.LowercaseUrls = true;
                 options.AppendTrailingSlash = true;
             });
-            services.AddDbContext<FoodContext>(options =>
-            options.UseSqlServer(
-                configRoot.GetConnectionString("FoodContext")));
+
         }
-        public void Configure(WebApplication app, IWebHostEnvironment env)
+
+        // This method gets called by the runtime.
+        // Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app)
         {
-            if (!app.Environment.IsDevelopment())
-            {
-                app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+
+            app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+
             app.UseRouting();
-            app.UseAuthorization();
-            app.MapRazorPages();
-            app.Run();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}/{slug?}");
+            });
         }
     }
 }
+
+
