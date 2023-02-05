@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Food>
+@{
     ViewData["Title"] = "Shop";
 }
 <div id="carouselPizza" class="carousel slide">
@@ -38,4 +39,24 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
+</div>
+
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Pizza</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var food in Model)
+            {
+                <tr>
+                    <td>@food.Name</td>
+                    <td>$@food.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

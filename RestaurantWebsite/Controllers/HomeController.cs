@@ -6,11 +6,18 @@ namespace RestaurantWebsite.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        /*private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+        }
+        */
+        private FoodContext context { get; set; }
+
+        public HomeController(FoodContext ctx)
+        {
+            context = ctx;
         }
 
         public IActionResult Index()
@@ -30,7 +37,8 @@ namespace RestaurantWebsite.Controllers
 
         public IActionResult Shop()
         {
-            return View();
+            var food = context.Foods.OrderBy(m => m.MenuId).ToList();
+            return View(food);
         }
 
 
