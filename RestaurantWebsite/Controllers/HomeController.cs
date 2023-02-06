@@ -28,7 +28,7 @@ namespace RestaurantWebsite.Controllers
             return View();
         }
 
-        public IActionResult Shop()
+        public IActionResult Menu()
         {
             return View();
         }
