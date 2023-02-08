@@ -35,7 +35,7 @@ namespace RestaurantWebsite.Controllers
             return View();
         }
 
-        public IActionResult Shop()
+        public IActionResult Menu()
         {
             var food = context.Foods.OrderBy(m => m.MenuId).ToList();
             return View(food);
