@@ -24,7 +24,7 @@ namespace RestaurantWebsite
 
             // Added the following 2 lines of code for assignment3!!!!!!!!
             services.AddDbContext<FoodContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("FoodContext")));
+                options.UseSqlite(Configuration.GetConnectionString("FoodContext")));
 
 
             //URLs lowercase and end with a trailing slash
