@@ -71,6 +71,63 @@ namespace RestaurantWebsite.Migrations
                             Price = 13.449999999999999
                         });
                 });
+
+            modelBuilder.Entity("RestaurantWebsite.Models.Reservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Fname")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Lname")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("People")
+                        .IsRequired()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("ReserveDate")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReserveTime")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reservations");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "AnaMarie@gmail.com",
+                            Fname = "Ana",
+                            Lname = "Marie",
+                            Note = "n/a",
+                            People = 5,
+                            PhoneNumber = "215-123-4567",
+                            ReserveDate = new DateTime(2020, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReserveTime = "6:30 PM"
+                        });
+                });
 #pragma warning restore 612, 618
         }
     }

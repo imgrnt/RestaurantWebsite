@@ -30,10 +30,29 @@ namespace RestaurantWebsite.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Reserve()
         {
             return View();
         }
+
+
+        [HttpPost]
+        public IActionResult Reserve(Reservation appointment)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Reservations.Add(appointment);
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+
+                return View(appointment);
+            }
+        }
+
 
         public IActionResult Menu()
         {

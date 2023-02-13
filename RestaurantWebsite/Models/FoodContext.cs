@@ -4,14 +4,13 @@ namespace RestaurantWebsite.Models
 {
     public class FoodContext : DbContext
     {
-        public FoodContext(DbContextOptions<FoodContext> options)
-    : base(options)
-        { }
+        public FoodContext(DbContextOptions<FoodContext> options): base(options){ }
+
         public DbSet<Food> Foods { get; set; }
-        protected override void OnModelCreating(
-            ModelBuilder modelBuilder)
+        public DbSet<Reservation> Reservations { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Food>().HasData(
                 new Food
@@ -52,6 +51,11 @@ namespace RestaurantWebsite.Models
                     Price = 13.45
                 }
             );
+
+            modelBuilder.Entity<Reservation>().HasData(
+                new Reservation { Id = 1, Fname = "Ana", Lname = "Marie", Email = "AnaMarie@gmail.com", PhoneNumber = "215-123-4567", ReserveDate = DateTime.Parse("2020 01, 22"), ReserveTime = "6:30 PM", People = 5, Note = "n/a" }
+            );
+
         }
     }
 }
