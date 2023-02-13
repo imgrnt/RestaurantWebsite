@@ -12,8 +12,8 @@ using RestaurantWebsite.Models;
 namespace RestaurantWebsite.Migrations
 {
     [DbContext(typeof(FoodContext))]
-    [Migration("20230201205953_mymi")]
-    partial class mymi
+    [Migration("20230213212636_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -78,6 +78,65 @@ namespace RestaurantWebsite.Migrations
                             MenuId = 6,
                             Name = "Meat Lovers Pizza",
                             Price = 13.449999999999999
+                        });
+                });
+
+            modelBuilder.Entity("RestaurantWebsite.Models.Reservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Fname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Lname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("People")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ReserveDate")
+                        .IsRequired()
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ReserveTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reservations");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "AnaMarie@gmail.com",
+                            Fname = "Ana",
+                            Lname = "Marie",
+                            Note = "n/a",
+                            People = 5,
+                            PhoneNumber = "215-123-4567",
+                            ReserveDate = new DateTime(2020, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReserveTime = "6:30 PM"
                         });
                 });
 #pragma warning restore 612, 618
