@@ -25,7 +25,7 @@ namespace RestaurantWebsite
             // Added the following 2 lines of code for assignment3!!!!!!!!
             services.AddDbContext<FoodContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("FoodContext")));
-                //options.UseSqlServer(Configuaration.GetConnectionString("FoodContext")));
+              //options.UseSqlServer(Configuration.GetConnectionString("FoodContext")));
 
 
 
