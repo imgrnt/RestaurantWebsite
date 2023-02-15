@@ -53,6 +53,22 @@ namespace RestaurantWebsite.Controllers
             }
         }
 
+        
+        public IActionResult ReserveList()
+        {
+
+            var reservation = context.Reservations
+                .OrderBy(c => c.Id).ToList();
+            return View(reservation);
+
+        }
+
+
+
+
+
+
+
 
         public IActionResult Menu()
         {

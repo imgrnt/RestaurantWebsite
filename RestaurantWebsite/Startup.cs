@@ -30,6 +30,7 @@ namespace RestaurantWebsite
 
 
 
+
             //URLs lowercase and end with a trailing slash
             services.AddRouting(options => {
                 options.LowercaseUrls = true;
