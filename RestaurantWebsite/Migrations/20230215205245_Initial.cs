@@ -51,27 +51,37 @@ namespace RestaurantWebsite.Migrations
             migrationBuilder.InsertData(
                 table: "Foods",
                 columns: new[] { "MenuId", "Name", "Price" },
-                values: new object[] { 2, "Neopolitan Pizza", 13.449999999999999 });
+                values: new object[] { 2, "Pepperoni Pizza", 14.99 });
 
             migrationBuilder.InsertData(
                 table: "Foods",
                 columns: new[] { "MenuId", "Name", "Price" },
-                values: new object[] { 3, "White Pizza", 11.0 });
+                values: new object[] { 3, "Pizza with Salami and Olives", 15.99 });
 
             migrationBuilder.InsertData(
                 table: "Foods",
                 columns: new[] { "MenuId", "Name", "Price" },
-                values: new object[] { 4, "Philly Pizza", 14.449999999999999 });
+                values: new object[] { 4, "Quattro Pizza Formaggi", 14.99 });
 
             migrationBuilder.InsertData(
                 table: "Foods",
                 columns: new[] { "MenuId", "Name", "Price" },
-                values: new object[] { 5, "House Special Pizza", 15.0 });
+                values: new object[] { 5, "Margherita Pizza", 10.99 });
 
             migrationBuilder.InsertData(
                 table: "Foods",
                 columns: new[] { "MenuId", "Name", "Price" },
-                values: new object[] { 6, "Meat Lovers Pizza", 13.449999999999999 });
+                values: new object[] { 6, "Pizza with Minced Meat", 15.99 });
+
+            migrationBuilder.InsertData(
+                table: "Foods",
+                columns: new[] { "MenuId", "Name", "Price" },
+                values: new object[] { 7, "Hot Salami Pizza", 14.99 });
+
+            migrationBuilder.InsertData(
+                table: "Foods",
+                columns: new[] { "MenuId", "Name", "Price" },
+                values: new object[] { 8, "Pizza with Grilled Meat", 16.989999999999998 });
 
             migrationBuilder.InsertData(
                 table: "Reservations",

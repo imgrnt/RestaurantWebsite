@@ -1,0 +1,79 @@
+﻿@model List<Food>
+@{
+    ViewData["Title"] = "Shop";
+}
+<style>
+    h5 {
+        color: ghostwhite;
+        font-size: 30px;
+    }
+
+    p {
+        color: darkslateblue;
+        font-size: 18px;
+    }
+</style>
+<div id="carouselPizza" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselPizza" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselPizza" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselPizza" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://cdn.ruled.me/wp-content/uploads/2014/08/pepperonipizza.jpg" height="500" class="d-block w-100" alt="pepperoni pizza">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Pepperoni Pizza</h5>
+                <p>Only the finest salami is used here.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://ychef.files.bbci.co.uk/976x549/p0ctz0wr.jpg" height="500" class="d-block w-100" alt="pineapple pizza">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Pineapple Pizza</h5>
+                <p>Only the finest pineapples are used here.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://myfoodbook.com.au/sites/default/files/styles/schema_img/public/recipe_photo/Whisk_PI_190919_Pizzas_006_MEAT_LOVERS.jpg" height="500" class="d-block w-100" alt="meat lover">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Meat Lovers Pizza</h5>
+                <p>Only the finest meat is used here.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPizza" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselPizza" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Pizza</th>
+                <th>Price (Large)</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var food in Model)
+            {
+                <tr>
+                    <td>@food.Name</td>
+                    <td>$@food.Price</td>
+                    <td>
+                        <input type="number" id="quantity" style="width: 50px;">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @*Placeholder button, replace / modify when we have proper controller setup*@
+    <button id="order" class="btn-success rounded-2">Checkout</button>
+</div>
