@@ -23,44 +23,32 @@ namespace RestaurantWebsite.Models
                 new Food
                 {
                     MenuId = 2,
-                    Name = "Pepperoni Pizza",
-                    Price = 14.99
+                    Name = "Neopolitan Pizza",
+                    Price = 13.45
                 },
                 new Food
                 {
                     MenuId = 3,
-                    Name = "Pizza with Salami and Olives",
-                    Price = 15.99
+                    Name = "White Pizza",
+                    Price = 11.00
                 },
                 new Food
                 {
                     MenuId = 4,
-                    Name = "Quattro Pizza Formaggi",
-                    Price = 14.99
+                    Name = "Philly Pizza",
+                    Price = 14.45
                 },
                 new Food
                 {
                     MenuId = 5,
-                    Name = "Margherita Pizza",
-                    Price = 10.99
+                    Name = "House Special Pizza",
+                    Price = 15.00
                 },
                 new Food
                 {
                     MenuId = 6,
-                    Name = "Pizza with Minced Meat",
-                    Price = 15.99
-                },
-                new Food
-                {
-                    MenuId = 7,
-                    Name = "Hot Salami Pizza",
-                    Price = 14.99
-                },
-                new Food
-                {
-                    MenuId = 8,
-                    Name = "Pizza with Grilled Meat",
-                    Price = 16.99
+                    Name = "Meat Lovers Pizza",
+                    Price = 13.45
                 }
             );
 
