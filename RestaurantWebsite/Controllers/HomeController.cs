@@ -36,6 +36,12 @@ namespace RestaurantWebsite.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Menu()
+        {
+            return View();
+        }
+
 
         [HttpPost]
         public IActionResult Reserve(Reservation appointment)
@@ -70,7 +76,7 @@ namespace RestaurantWebsite.Controllers
 
 
 
-        public IActionResult Menu()
+        public IActionResult Shop()
         {
             var food = context.Foods.OrderBy(m => m.MenuId).ToList();
             return View(food);
