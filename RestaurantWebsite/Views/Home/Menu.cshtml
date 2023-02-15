@@ -71,7 +71,7 @@
                     <!-- Product details-->
                     <div class="col-lg-5 col-md-6 pt-4 pt-lg-0">
                         <div class="product-details ms-auto pb-3">
-                            <div class="mb-3"><span class="h3 fw-normal text-accent me-1">$12.<small>99</small></span></div>
+                            <div class="mb-3"><span class="h3 fw-normal text-accent me-1 text-muted text-decoration-line-through">$12.99</span>$10.99</div> 
                             <form class="mb-grid-gutter">
                                 <div class="row mx-n2">
                                     <div class="col-6 px-2">
@@ -163,7 +163,7 @@
                                         <option value="4">4</option>
                                         <option value="5">5</option>
                                     </select>
-                                    
+
                                 </div>
                             </form>
                             <h5 class="h6 mb-3 pb-3 border-bottom"><i class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product info</h5>
@@ -553,126 +553,184 @@
 
 <section class="container tab-content py-4 py-sm-5">
     <h2 class="text-center pt-2 pt-sm-0 mb-sm-5">Pizza</h2>
-        <div class="row pt-3 pt-sm-0">
-          <!-- Item-->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+    <div class="row pt-3 pt-sm-0">
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
             <div class="card product-card border pb-2">
                 <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                 <a class="d-block" href="#quick-view1" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/01.jpg" alt="Pizza"></a>
-              <div class="card-body pt-1 pb-2">
-                <h3 class="product-title fs-md"><a href="#quick-view1" data-bs-toggle="modal">Vegano Pizza Delux</a></h3>
-                <p class="fs-ms text-muted">Broccoli, Mushrooms, Bell pepper, Corn, Onion, Mozzarella, Parmesan</p>
-                
-                <div class="d-flex align-items-center justify-content-between">
-                        <div class="product-price"><span class="text-muted text-decoration-line-through">$12.99</span>$10.99</div>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view1" data-bs-toggle="modal">Vegano Pizza Delux</a></h3>
+                    <p class="fs-ms text-muted">Broccoli, Mushrooms, Bell pepper, Corn, Onion, Mozzarella, Parmesan</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-muted text-decoration-line-through">$12.99</span> $10.99
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- Item-->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
             <div class="card product-card border pb-2">
                 <a class="d-block" href="#quick-view2" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/02.jpg" alt="Pizza"></a>
-              <div class="card-body pt-1 pb-2">
-                <h3 class="product-title fs-md"><a href="#quick-view2" data-bs-toggle="modal">Pepperoni Pizza</a></h3>
-                <p class="fs-ms text-muted">Pepperoni, Tomatoes, Paprika, Chili, Mozzarella, Parmesan</p>
-                
-                <div class="d-flex align-items-center justify-content-between">
-                        <div class="product-price"><span class="text-accent">$14.99</span></div>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view2" data-bs-toggle="modal">Pepperoni Pizza</a></h3>
+                    <p class="fs-ms text-muted">Pepperoni, Tomatoes, Paprika, Chili, Mozzarella, Parmesan</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$14.99</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- Item-->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
             <div class="card product-card border pb-2">
                 <a class="d-block" href="#quick-view3" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/large-preview.jpg" alt="Pizza"></a>
-              <div class="card-body pt-1 pb-2">
-                <h3 class="product-title fs-md"><a href="#quick-view3" data-bs-toggle="modal">Pizza with Salami and Olives</a></h3>
-                <p class="fs-ms text-muted">Salami, Olives, Bell pepper, Mushrooms, Mozzarella, Parmesan</p>
-                
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="product-price">
-                      <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                      </div>
-                      <span class="text-accent">$15.99</span></div>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view3" data-bs-toggle="modal">Pizza with Salami and Olives</a></h3>
+                    <p class="fs-ms text-muted">Salami, Olives, Bell pepper, Mushrooms, Mozzarella, Parmesan</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$15.99</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- Item-->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
             <div class="card product-card border pb-2">
                 <a class="d-block" href="#quick-view4" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/04.jpg" alt="Pizza"></a>
-              <div class="card-body pt-1 pb-2">
+                <div class="card-body pt-1 pb-2">
                     <h3 class="product-title fs-md"><a href="#quick-view4" data-bs-toggle="modal">Quattro Pizza Formaggi</a></h3>
-                <p class="fs-ms text-muted">Mozzarella, Parmesan, Monterey Jack, Pecorino Romano, Asiago</p>
-                
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="product-price"><span class="text-accent">$14.99</span></div>
+                    <p class="fs-ms text-muted">Mozzarella, Parmesan, Monterey Jack, Pecorino Romano, Asiago</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+
+                            </div>
+                            <span class="text-accent">$14.99</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- Item-->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-            <div class="card product-card border pb-2"><a class="d-block" href="#quick-view5" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/05.jpg" alt="Pizza"></a>
-              <div class="card-body pt-1 pb-2">
-                <h3 class="product-title fs-md"><a href="#quick-view5" data-bs-toggle="modal">Margherita Pizza</a></h3>
-                <p class="fs-ms text-muted">Mozzarella, Parmesan, Basil, Fresh tomatoes, Tomato sauce</p>
-                
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="product-price"><span class="text-accent">$10.99</span></div>
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card product-card border pb-2">
+                <a class="d-block" href="#quick-view5" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/05.jpg" alt="Pizza"></a>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view5" data-bs-toggle="modal">Margherita Pizza</a></h3>
+                    <p class="fs-ms text-muted">Mozzarella, Parmesan, Basil, Fresh tomatoes, Tomato sauce</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$10.99</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- Item-->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-            <div class="card product-card border pb-2"><a class="d-block" href="#quick-view6" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/06.jpg" alt="Pizza"></a>
-              <div class="card-body pt-1 pb-2">
-                <h3 class="product-title fs-md"><a href="#quick-view6" data-bs-toggle="modal">Pizza with Minced Meat</a></h3>
-                <p class="fs-ms text-muted">Minced meat, Bacon, Jalapeño, Mozzarella, Parmesan, Olives, Tomatoes</p>
-                
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="product-price"><span class="text-accent">$15.99</span></div>
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card product-card border pb-2">
+                <a class="d-block" href="#quick-view6" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/06.jpg" alt="Pizza"></a>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view6" data-bs-toggle="modal">Pizza with Minced Meat</a></h3>
+                    <p class="fs-ms text-muted">Minced meat, Bacon, Jalapeño, Mozzarella, Parmesan, Olives, Tomatoes</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$15.99</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- Item-->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
             <div class="card product-card border pb-2">
                 <a class="d-block" href="#quick-view7" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/07.jpg" alt="Pizza"></a>
-              <div class="card-body pt-1 pb-2">
+                <div class="card-body pt-1 pb-2">
                     <h3 class="product-title fs-md"><a href="#quick-view7" data-bs-toggle="modal">Hot Salami Pizza </a></h3>
-                <p class="fs-ms text-muted">Salami, Chilli, Jalapeño, Mozzarella, Parmesan, Tomato sauce</p>
-                
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="product-price"><span class="text-accent">$14.99</span></div>
+                    <p class="fs-ms text-muted">Salami, Chilli, Jalapeño, Mozzarella, Parmesan, Tomato sauce</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$14.99</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- Item-->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-            <div class="card product-card border pb-2"><a class="d-block" href="#quick-view8" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/08.jpg" alt="Pizza"></a>
-              <div class="card-body pt-1 pb-2">
-                <h3 class="product-title fs-md"><a href="#quick-view8" data-bs-toggle="modal">Pizza with Grilled Meat</a></h3>
-                <p class="fs-ms text-muted">Grilled meat, Tomatoes, Bell pepper, Onion, Mozzarella, Parmesan</p>
-                
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="product-price"><span class="text-accent">$16.99</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card product-card border pb-2">
+                <a class="d-block" href="#quick-view8" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/08.jpg" alt="Pizza"></a>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view8" data-bs-toggle="modal">Pizza with Grilled Meat</a></h3>
+                    <p class="fs-ms text-muted">Grilled meat, Tomatoes, Bell pepper, Onion, Mozzarella, Parmesan</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$16.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <div>
