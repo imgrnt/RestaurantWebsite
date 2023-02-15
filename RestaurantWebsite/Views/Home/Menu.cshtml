@@ -2,13 +2,19 @@
 @{
     ViewData["Title"] = "Shop";
 }
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
 <style>
     h5 {
-        color:ghostwhite;
-        font-size:30px;
+        color: black;
+        font-size: 30px;
     }
+
     p {
-        color:darkslateblue;
+        color: darkslateblue;
         font-size: 18px;
     }
 </style>
@@ -50,6 +56,682 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+
+<div class="modal-quick-view modal fade" id="quick-view1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Vegano Pizza Delux</h4>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Product gallery-->
+                    <div class="col-lg-7 col-md-6 pe-lg-0"><img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/01.jpg" alt="Pizza"></div>
+                    <!-- Product details-->
+                    <div class="col-lg-5 col-md-6 pt-4 pt-lg-0">
+                        <div class="product-details ms-auto pb-3">
+                            <div class="mb-3"><span class="h3 fw-normal text-accent me-1 text-muted text-decoration-line-through">$12.99</span>$10.99</div> 
+                            <form class="mb-grid-gutter">
+                                <div class="row mx-n2">
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-size">Size:</label>
+                                            <select class="form-select" id="pizza-size">
+                                                <option value="small">Small</option>
+                                                <option value="medium">Medium</option>
+                                                <option value="large">Large</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-base">Base:</label>
+                                            <select class="form-select" id="pizza-base">
+                                                <option value="standard">Standard</option>
+                                                <option value="thin">Thin</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <select class="form-select me-3" style="width: 5rem;">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <h5 class="h6 mb-3 pb-3 border-bottom"><i class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product info</h5>
+                            <h6 class="fs-sm mb-2">Ingredients:</h6>
+                            <p class="fs-sm">Broccoli, Mushrooms, Bell pepper, Corn, Onion, Mozzarella, Parmesan</p>
+                            <h6 class="fs-sm mb-2">Allergies</h6>
+                            <p class="fs-sm">Gluten, Dairy</p>
+                            <h6 class="fs-sm mb-2">Calories</h6>
+                            <p class="fs-sm mb-0">340</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-quick-view modal fade" id="quick-view2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Pepperoni Pizza</h4>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Product gallery-->
+                    <div class="col-lg-7 col-md-6 pe-lg-0"><img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/02.jpg" alt="Pizza"></div>
+                    <!-- Product details-->
+                    <div class="col-lg-5 col-md-6 pt-4 pt-lg-0">
+                        <div class="product-details ms-auto pb-3">
+                            <div class="mb-3"><span class="h3 fw-normal text-accent me-1">$14.<small>99</small></span></div>
+                            <form class="mb-grid-gutter">
+                                <div class="row mx-n2">
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-size">Size:</label>
+                                            <select class="form-select" id="pizza-size">
+                                                <option value="small">Small</option>
+                                                <option value="medium">Medium</option>
+                                                <option value="large">Large</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-base">Base:</label>
+                                            <select class="form-select" id="pizza-base">
+                                                <option value="standard">Standard</option>
+                                                <option value="thin">Thin</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <select class="form-select me-3" style="width: 5rem;">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+
+                                </div>
+                            </form>
+                            <h5 class="h6 mb-3 pb-3 border-bottom"><i class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product info</h5>
+                            <h6 class="fs-sm mb-2">Ingredients:</h6>
+                            <p class="fs-sm">Pepperoni, Tomatoes, Paprika, Chili, Mozzarella, Parmesan</p>
+                            <h6 class="fs-sm mb-2">Allergies</h6>
+                            <p class="fs-sm">Gluten, Dairy</p>
+                            <h6 class="fs-sm mb-2">Calories</h6>
+                            <p class="fs-sm mb-0">313</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-quick-view modal fade" id="quick-view3" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Pizza with Salami and Olives</h4>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Product gallery-->
+                    <div class="col-lg-7 col-md-6 pe-lg-0"><img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/large-preview.jpg" alt="Pizza"></div>
+                    <!-- Product details-->
+                    <div class="col-lg-5 col-md-6 pt-4 pt-lg-0">
+                        <div class="product-details ms-auto pb-3">
+                            <div class="mb-3"><span class="h3 fw-normal text-accent me-1">$15.<small>99</small></span></div>
+                            <form class="mb-grid-gutter">
+                                <div class="row mx-n2">
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-size">Size:</label>
+                                            <select class="form-select" id="pizza-size">
+                                                <option value="small">Small</option>
+                                                <option value="medium">Medium</option>
+                                                <option value="large">Large</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-base">Base:</label>
+                                            <select class="form-select" id="pizza-base">
+                                                <option value="standard">Standard</option>
+                                                <option value="thin">Thin</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <select class="form-select me-3" style="width: 5rem;">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+
+                                </div>
+                            </form>
+                            <h5 class="h6 mb-3 pb-3 border-bottom"><i class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product info</h5>
+                            <h6 class="fs-sm mb-2">Ingredients:</h6>
+                            <p class="fs-sm">Salami, Olives, Bell pepper, Mushrooms, Mozzarella, Parmesan</p>
+                            <h6 class="fs-sm mb-2">Allergies</h6>
+                            <p class="fs-sm">Gluten, Dairy</p>
+                            <h6 class="fs-sm mb-2">Calories</h6>
+                            <p class="fs-sm mb-0">811</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-quick-view modal fade" id="quick-view4" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Pizza Quattro Formaggi</h4>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Product gallery-->
+                    <div class="col-lg-7 col-md-6 pe-lg-0"><img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/04.jpg" alt="Pizza"></div>
+                    <!-- Product details-->
+                    <div class="col-lg-5 col-md-6 pt-4 pt-lg-0">
+                        <div class="product-details ms-auto pb-3">
+                            <div class="mb-3"><span class="h3 fw-normal text-accent me-1">$14.<small>99</small></span></div>
+                            <form class="mb-grid-gutter">
+                                <div class="row mx-n2">
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-size">Size:</label>
+                                            <select class="form-select" id="pizza-size">
+                                                <option value="small">Small</option>
+                                                <option value="medium">Medium</option>
+                                                <option value="large">Large</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-base">Base:</label>
+                                            <select class="form-select" id="pizza-base">
+                                                <option value="standard">Standard</option>
+                                                <option value="thin">Thin</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <select class="form-select me-3" style="width: 5rem;">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+
+                                </div>
+                            </form>
+                            <h5 class="h6 mb-3 pb-3 border-bottom"><i class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product info</h5>
+                            <h6 class="fs-sm mb-2">Ingredients:</h6>
+                            <p class="fs-sm">Mozzarella, Parmesan, Monterey Jack, Pecorino Romano, Asiago</p>
+                            <h6 class="fs-sm mb-2">Allergies</h6>
+                            <p class="fs-sm">Gluten, Dairy</p>
+                            <h6 class="fs-sm mb-2">Calories</h6>
+                            <p class="fs-sm mb-0">123</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-quick-view modal fade" id="quick-view5" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Margherita Pizza</h4>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Product gallery-->
+                    <div class="col-lg-7 col-md-6 pe-lg-0"><img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/05.jpg" alt="Pizza"></div>
+                    <!-- Product details-->
+                    <div class="col-lg-5 col-md-6 pt-4 pt-lg-0">
+                        <div class="product-details ms-auto pb-3">
+                            <div class="mb-3"><span class="h3 fw-normal text-accent me-1">$10.<small>99</small></span></div>
+                            <form class="mb-grid-gutter">
+                                <div class="row mx-n2">
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-size">Size:</label>
+                                            <select class="form-select" id="pizza-size">
+                                                <option value="small">Small</option>
+                                                <option value="medium">Medium</option>
+                                                <option value="large">Large</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-base">Base:</label>
+                                            <select class="form-select" id="pizza-base">
+                                                <option value="standard">Standard</option>
+                                                <option value="thin">Thin</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <select class="form-select me-3" style="width: 5rem;">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+
+                                </div>
+                            </form>
+                            <h5 class="h6 mb-3 pb-3 border-bottom"><i class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product info</h5>
+                            <h6 class="fs-sm mb-2">Ingredients:</h6>
+                            <p class="fs-sm">Mozzarella, Parmesan, Basil, Fresh tomatoes, Tomato sauce</p>
+                            <h6 class="fs-sm mb-2">Allergies</h6>
+                            <p class="fs-sm">Gluten, Dairy</p>
+                            <h6 class="fs-sm mb-2">Calories</h6>
+                            <p class="fs-sm mb-0">200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-quick-view modal fade" id="quick-view6" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Pizza with Miced Meat</h4>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Product gallery-->
+                    <div class="col-lg-7 col-md-6 pe-lg-0"><img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/06.jpg" alt="Pizza"></div>
+                    <!-- Product details-->
+                    <div class="col-lg-5 col-md-6 pt-4 pt-lg-0">
+                        <div class="product-details ms-auto pb-3">
+                            <div class="mb-3"><span class="h3 fw-normal text-accent me-1">$15.<small>99</small></span></div>
+                            <form class="mb-grid-gutter">
+                                <div class="row mx-n2">
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-size">Size:</label>
+                                            <select class="form-select" id="pizza-size">
+                                                <option value="small">Small</option>
+                                                <option value="medium">Medium</option>
+                                                <option value="large">Large</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-base">Base:</label>
+                                            <select class="form-select" id="pizza-base">
+                                                <option value="standard">Standard</option>
+                                                <option value="thin">Thin</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <select class="form-select me-3" style="width: 5rem;">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <h5 class="h6 mb-3 pb-3 border-bottom"><i class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product info</h5>
+                            <h6 class="fs-sm mb-2">Ingredients:</h6>
+                            <p class="fs-sm">Minced meat, Bacon, Jalapeño, Mozzarella, Parmesan, Olives, Tomatoes</p>
+                            <h6 class="fs-sm mb-2">Allergies</h6>
+                            <p class="fs-sm">Gluten, Dairy</p>
+                            <h6 class="fs-sm mb-2">Calories</h6>
+                            <p class="fs-sm mb-0">411</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-quick-view modal fade" id="quick-view7" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Hot Salami Pizza</h4>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Product gallery-->
+                    <div class="col-lg-7 col-md-6 pe-lg-0"><img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/07.jpg" alt="Pizza"></div>
+                    <!-- Product details-->
+                    <div class="col-lg-5 col-md-6 pt-4 pt-lg-0">
+                        <div class="product-details ms-auto pb-3">
+                            <div class="mb-3"><span class="h3 fw-normal text-accent me-1">$14.<small>99</small></span></div>
+                            <form class="mb-grid-gutter">
+                                <div class="row mx-n2">
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-size">Size:</label>
+                                            <select class="form-select" id="pizza-size">
+                                                <option value="small">Small</option>
+                                                <option value="medium">Medium</option>
+                                                <option value="large">Large</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-base">Base:</label>
+                                            <select class="form-select" id="pizza-base">
+                                                <option value="standard">Standard</option>
+                                                <option value="thin">Thin</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <select class="form-select me-3" style="width: 5rem;">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <h5 class="h6 mb-3 pb-3 border-bottom"><i class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product info</h5>
+                            <h6 class="fs-sm mb-2">Ingredients:</h6>
+                            <p class="fs-sm">Salami, Chilli, Jalapeño, Mozzarella, Parmesan, Tomato sauce</p>
+                            <h6 class="fs-sm mb-2">Allergies</h6>
+                            <p class="fs-sm">Gluten, Dairy</p>
+                            <h6 class="fs-sm mb-2">Calories</h6>
+                            <p class="fs-sm mb-0">320</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-quick-view modal fade" id="quick-view8" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Pizza with Grilled Meat</h4>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Product gallery-->
+                    <div class="col-lg-7 col-md-6 pe-lg-0"><img src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/08.jpg" alt="Pizza"></div>
+                    <!-- Product details-->
+                    <div class="col-lg-5 col-md-6 pt-4 pt-lg-0">
+                        <div class="product-details ms-auto pb-3">
+                            <div class="mb-3"><span class="h3 fw-normal text-accent me-1">$16.<small>99</small></span></div>
+                            <form class="mb-grid-gutter">
+                                <div class="row mx-n2">
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-size">Size:</label>
+                                            <select class="form-select" id="pizza-size">
+                                                <option value="small">Small</option>
+                                                <option value="medium">Medium</option>
+                                                <option value="large">Large</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 px-2">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="pizza-base">Base:</label>
+                                            <select class="form-select" id="pizza-base">
+                                                <option value="standard">Standard</option>
+                                                <option value="thin">Thin</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex align-items-center">
+                                    <select class="form-select me-3" style="width: 5rem;">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+
+                                </div>
+                            </form>
+                            <h5 class="h6 mb-3 pb-3 border-bottom"><i class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product info</h5>
+                            <h6 class="fs-sm mb-2">Ingredients:</h6>
+                            <p class="fs-sm">Grilled meat, Tomatoes, Bell pepper, Onion, Mozzarella, Parmesan</p>
+                            <h6 class="fs-sm mb-2">Allergies</h6>
+                            <p class="fs-sm">Gluten, Dairy</p>
+                            <h6 class="fs-sm mb-2">Calories</h6>
+                            <p class="fs-sm mb-0">220</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="container tab-content py-4 py-sm-5">
+    <h2 class="text-center pt-2 pt-sm-0 mb-sm-5">Pizza</h2>
+    <div class="row pt-3 pt-sm-0">
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card product-card border pb-2">
+                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                <a class="d-block" href="#quick-view1" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/01.jpg" alt="Pizza"></a>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view1" data-bs-toggle="modal">Vegano Pizza Delux</a></h3>
+                    <p class="fs-ms text-muted">Broccoli, Mushrooms, Bell pepper, Corn, Onion, Mozzarella, Parmesan</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-muted text-decoration-line-through">$12.99</span> $10.99
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card product-card border pb-2">
+                <a class="d-block" href="#quick-view2" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/02.jpg" alt="Pizza"></a>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view2" data-bs-toggle="modal">Pepperoni Pizza</a></h3>
+                    <p class="fs-ms text-muted">Pepperoni, Tomatoes, Paprika, Chili, Mozzarella, Parmesan</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$14.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card product-card border pb-2">
+                <a class="d-block" href="#quick-view3" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/large-preview.jpg" alt="Pizza"></a>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view3" data-bs-toggle="modal">Pizza with Salami and Olives</a></h3>
+                    <p class="fs-ms text-muted">Salami, Olives, Bell pepper, Mushrooms, Mozzarella, Parmesan</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$15.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card product-card border pb-2">
+                <a class="d-block" href="#quick-view4" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/04.jpg" alt="Pizza"></a>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view4" data-bs-toggle="modal">Quattro Pizza Formaggi</a></h3>
+                    <p class="fs-ms text-muted">Mozzarella, Parmesan, Monterey Jack, Pecorino Romano, Asiago</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+
+                            </div>
+                            <span class="text-accent">$14.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card product-card border pb-2">
+                <a class="d-block" href="#quick-view5" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/05.jpg" alt="Pizza"></a>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view5" data-bs-toggle="modal">Margherita Pizza</a></h3>
+                    <p class="fs-ms text-muted">Mozzarella, Parmesan, Basil, Fresh tomatoes, Tomato sauce</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$10.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card product-card border pb-2">
+                <a class="d-block" href="#quick-view6" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/06.jpg" alt="Pizza"></a>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view6" data-bs-toggle="modal">Pizza with Minced Meat</a></h3>
+                    <p class="fs-ms text-muted">Minced meat, Bacon, Jalapeño, Mozzarella, Parmesan, Olives, Tomatoes</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$15.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card product-card border pb-2">
+                <a class="d-block" href="#quick-view7" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/07.jpg" alt="Pizza"></a>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view7" data-bs-toggle="modal">Hot Salami Pizza </a></h3>
+                    <p class="fs-ms text-muted">Salami, Chilli, Jalapeño, Mozzarella, Parmesan, Tomato sauce</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$14.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Item-->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card product-card border pb-2">
+                <a class="d-block" href="#quick-view8" data-bs-toggle="modal"><img class="card-img-top" src="https://cartzilla.createx.studio/img/food-delivery/restaurants/single/08.jpg" alt="Pizza"></a>
+                <div class="card-body pt-1 pb-2">
+                    <h3 class="product-title fs-md"><a href="#quick-view8" data-bs-toggle="modal">Pizza with Grilled Meat</a></h3>
+                    <p class="fs-ms text-muted">Grilled meat, Tomatoes, Bell pepper, Onion, Mozzarella, Parmesan</p>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="product-price">
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <span class="text-accent">$16.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <div>
     <table class="table table-bordered table-striped">
