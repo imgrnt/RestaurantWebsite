@@ -43,32 +43,44 @@ namespace RestaurantWebsite.Migrations
                         new
                         {
                             MenuId = 2,
-                            Name = "Neopolitan Pizza",
-                            Price = 13.449999999999999
+                            Name = "Pepperoni Pizza",
+                            Price = 14.99
                         },
                         new
                         {
                             MenuId = 3,
-                            Name = "White Pizza",
-                            Price = 11.0
+                            Name = "Pizza with Salami and Olives",
+                            Price = 15.99
                         },
                         new
                         {
                             MenuId = 4,
-                            Name = "Philly Pizza",
-                            Price = 14.449999999999999
+                            Name = "Quattro Pizza Formaggi",
+                            Price = 14.99
                         },
                         new
                         {
                             MenuId = 5,
-                            Name = "House Special Pizza",
-                            Price = 15.0
+                            Name = "Margherita Pizza",
+                            Price = 10.99
                         },
                         new
                         {
                             MenuId = 6,
-                            Name = "Meat Lovers Pizza",
-                            Price = 13.449999999999999
+                            Name = "Pizza with Minced Meat",
+                            Price = 15.99
+                        },
+                        new
+                        {
+                            MenuId = 7,
+                            Name = "Hot Salami Pizza",
+                            Price = 14.99
+                        },
+                        new
+                        {
+                            MenuId = 8,
+                            Name = "Pizza with Grilled Meat",
+                            Price = 16.989999999999998
                         });
                 });
 
