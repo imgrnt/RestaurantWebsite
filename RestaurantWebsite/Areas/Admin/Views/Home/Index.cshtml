@@ -1,10 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Success";
+    Layout = "_MainLayout";
+    ViewBag.Title = "Admin";
+    // create culture variable
+    var culture = System.Globalization.CultureInfo.CreateSpecificCulture("en-US");
 }
 
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Admin</h1>
 
-
+<div class="row">
+    <div class="col-sm-4">
+        <div class="btn-group-vertical  col-12 mr-2">
+            <a asp-controller="Category" asp-action="Index"
+               class="btn text-dark btn-outline-primary">Manage categories</a>
+            <a asp-controller="Product" asp-action="Index"
+               class="btn text-dark btn-outline-primary">Manage products</a>
+        </div>
+    </div>
 </div>
+
