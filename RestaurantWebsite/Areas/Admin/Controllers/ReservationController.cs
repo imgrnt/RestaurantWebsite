@@ -33,14 +33,6 @@ namespace RestaurantWebsite.Controllers
             return View(reservation);
         }
 
-        /*
-        [HttpGet]
-        public IActionResult Add()
-        {
-            ViewBag.Action = "Add";
-            return View("edit", new Reservation());
-        }
-        */
 
 
         [HttpGet]
@@ -58,8 +50,6 @@ namespace RestaurantWebsite.Controllers
             return View("AddUpdate", reservation);
         }
 
-
-  
 
 
         [HttpPost]
@@ -81,11 +71,10 @@ namespace RestaurantWebsite.Controllers
             else
             {
                 ViewBag.Action = (reservation.Id == 0) ? "Add" : "Update";
-                return View(reservation);
+                return View("AddUpdate");
+
             }
         }
-
-
 
 
         [HttpGet]
