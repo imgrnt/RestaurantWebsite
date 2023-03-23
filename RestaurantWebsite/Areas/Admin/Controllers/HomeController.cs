@@ -9,5 +9,10 @@ namespace RestaurantWebsite.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public IActionResult ProductList()
+        {
+            return View();
+        }
     }
 }
