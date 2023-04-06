@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RestaurantWebsite.Models;
 
@@ -9,78 +10,80 @@ using RestaurantWebsite.Models;
 
 namespace RestaurantWebsite.Migrations
 {
-    [DbContext(typeof(FoodContext))]
-    partial class FoodContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(RestaurantContext))]
+    [Migration("20230405232135_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.0");
 
             modelBuilder.Entity("RestaurantWebsite.Models.Food", b =>
                 {
-                    b.Property<int>("MenuId")
+                    b.Property<int>("FoodId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<double?>("Price")
-                        .HasColumnType("REAL");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("TEXT");
 
-                    b.HasKey("MenuId");
+                    b.HasKey("FoodId");
 
                     b.ToTable("Foods");
 
                     b.HasData(
                         new
                         {
-                            MenuId = 1,
+                            FoodId = 1,
                             Name = "Plain Pizza",
-                            Price = 10.0
+                            Price = 10m
                         },
                         new
                         {
-                            MenuId = 2,
+                            FoodId = 2,
                             Name = "Pepperoni Pizza",
-                            Price = 14.99
+                            Price = 14.99m
                         },
                         new
                         {
-                            MenuId = 3,
+                            FoodId = 3,
                             Name = "Pizza with Salami and Olives",
-                            Price = 15.99
+                            Price = 15.99m
                         },
                         new
                         {
-                            MenuId = 4,
+                            FoodId = 4,
                             Name = "Quattro Pizza Formaggi",
-                            Price = 14.99
+                            Price = 14.99m
                         },
                         new
                         {
-                            MenuId = 5,
+                            FoodId = 5,
                             Name = "Margherita Pizza",
-                            Price = 10.99
+                            Price = 10.99m
                         },
                         new
                         {
-                            MenuId = 6,
+                            FoodId = 6,
                             Name = "Pizza with Minced Meat",
-                            Price = 15.99
+                            Price = 15.99m
                         },
                         new
                         {
-                            MenuId = 7,
+                            FoodId = 7,
                             Name = "Hot Salami Pizza",
-                            Price = 14.99
+                            Price = 14.99m
                         },
                         new
                         {
-                            MenuId = 8,
+                            FoodId = 8,
                             Name = "Pizza with Grilled Meat",
-                            Price = 16.989999999999998
+                            Price = 16.99m
                         });
                 });
 
@@ -106,8 +109,7 @@ namespace RestaurantWebsite.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("People")
-                        .IsRequired()
+                    b.Property<int>("People")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("PhoneNumber")
@@ -130,14 +132,38 @@ namespace RestaurantWebsite.Migrations
                         new
                         {
                             Id = 1,
-                            Email = "AnaMarie@gmail.com",
-                            Fname = "Ana",
-                            Lname = "Marie",
+                            Email = "ithan@gmail.com",
+                            Fname = "Ithan",
+                            Lname = "Sandoval",
                             Note = "n/a",
                             People = 5,
                             PhoneNumber = "215-123-4567",
-                            ReserveDate = new DateTime(2020, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReserveDate = new DateTime(2023, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ReserveTime = "6:30 PM"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "Peter@gmail.com",
+                            Fname = "Peter",
+                            Lname = "Hoang",
+                            Note = "n/a",
+                            People = 4,
+                            PhoneNumber = "267-999-999",
+                            ReserveDate = new DateTime(2023, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReserveTime = "7:30 PM"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Email = "Kevin@gmail.com",
+                            Fname = "Kevin",
+                            Lname = "Nguyen",
+                            Note = "n/a",
+                            People = 4,
+                            PhoneNumber = "610-123-4567",
+                            ReserveDate = new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReserveTime = "5:30 PM"
                         });
                 });
 #pragma warning restore 612, 618

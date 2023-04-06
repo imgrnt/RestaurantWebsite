@@ -11,9 +11,9 @@ namespace RestaurantWebsite.Controllers
     public class ReservationController : Controller
     {
 
-        private FoodContext context { get; set; }
+        private RestaurantContext context { get; set; }
 
-        public ReservationController(FoodContext ctx)
+        public ReservationController(RestaurantContext ctx)
         {
             context = ctx;
         }
@@ -29,7 +29,7 @@ namespace RestaurantWebsite.Controllers
         {
 
             var reservation = context.Reservations
-                .OrderBy(c => c.Id).ToList();
+            .OrderBy(c => c.Id).ToList();
             return View(reservation);
         }
 
