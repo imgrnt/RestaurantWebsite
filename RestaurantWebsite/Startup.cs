@@ -23,9 +23,9 @@ namespace RestaurantWebsite
             services.AddControllersWithViews();
 
             // Added the following 2 lines of code for assignment3!!!!!!!!
-            services.AddDbContext<FoodContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("FoodContext")));
-              //options.UseSqlServer(Configuration.GetConnectionString("FoodContext")));
+            services.AddDbContext<RestaurantContext>(options =>
+                options.UseSqlite(Configuration.GetConnectionString("RestaurantContext")));
+              //options.UseSqlServer(Configuration.GetConnectionString("RestaurantContext")));
 
 
 

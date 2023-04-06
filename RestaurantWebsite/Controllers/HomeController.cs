@@ -13,9 +13,9 @@ namespace RestaurantWebsite.Controllers
             _logger = logger;
         }
         */
-        private FoodContext context { get; set; }
+        private RestaurantContext context { get; set; }
 
-        public HomeController(FoodContext ctx)
+        public HomeController(RestaurantContext ctx)
         {
             context = ctx;
         }
@@ -66,7 +66,7 @@ namespace RestaurantWebsite.Controllers
 
         public IActionResult Shop()
         {
-            var food = context.Foods.OrderBy(m => m.MenuId).ToList();
+            var food = context.Foods.OrderBy(m => m.FoodId).ToList();
             return View(food);
         }
 
