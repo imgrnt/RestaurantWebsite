@@ -28,6 +28,7 @@
     <None Remove="Areas\Admin\Views\Reservation\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\Admin\Views\Images\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Areas\Admin\Views\Reservation\" />
   </ItemGroup>

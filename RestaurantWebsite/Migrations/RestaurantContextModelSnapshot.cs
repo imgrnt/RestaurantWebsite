@@ -23,11 +23,16 @@ namespace RestaurantWebsite.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Price")
+                    b.Property<decimal?>("Price")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("FoodId");
@@ -38,48 +43,56 @@ namespace RestaurantWebsite.Migrations
                         new
                         {
                             FoodId = 1,
+                            Description = "Homemade pizza sauce, Mozzarella cheese, Parmesan cheese",
                             Name = "Plain Pizza",
                             Price = 10m
                         },
                         new
                         {
                             FoodId = 2,
+                            Description = "Pepperoni, Tomatoes, Paprika, Chili, Mozzarella, Parmesan",
                             Name = "Pepperoni Pizza",
                             Price = 14.99m
                         },
                         new
                         {
                             FoodId = 3,
+                            Description = "Salami, Olives, Bell pepper, Mushrooms, Mozzarella, Parmesan",
                             Name = "Pizza with Salami and Olives",
                             Price = 15.99m
                         },
                         new
                         {
                             FoodId = 4,
-                            Name = "Quattro Pizza Formaggi",
+                            Description = "Broccoli, Mushrooms, Bell pepper, Corn, Onion, Mozzarella, Parmesan",
+                            Name = "Veggie Pizza",
                             Price = 14.99m
                         },
                         new
                         {
                             FoodId = 5,
+                            Description = "Mozzarella, Parmesan, Basil, Fresh tomatoes, Tomato sauce",
                             Name = "Margherita Pizza",
                             Price = 10.99m
                         },
                         new
                         {
                             FoodId = 6,
+                            Description = "Minced meat, Bacon, Jalapeño, Mozzarella, Parmesan, Olives, Tomatoes",
                             Name = "Pizza with Minced Meat",
                             Price = 15.99m
                         },
                         new
                         {
                             FoodId = 7,
+                            Description = "Salami, Chilli, Jalapeño, Mozzarella, Parmesan, Tomato sauce",
                             Name = "Hot Salami Pizza",
                             Price = 14.99m
                         },
                         new
                         {
                             FoodId = 8,
+                            Description = "Grilled meat, Tomatoes, Bell pepper, Onion, Mozzarella, Parmesan",
                             Name = "Pizza with Grilled Meat",
                             Price = 16.99m
                         });

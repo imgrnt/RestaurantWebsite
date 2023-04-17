@@ -16,7 +16,8 @@ namespace RestaurantWebsite.Migrations
                     FoodId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
-                    Price = table.Column<decimal>(type: "TEXT", nullable: false)
+                    Price = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -45,43 +46,43 @@ namespace RestaurantWebsite.Migrations
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Name", "Price" },
-                values: new object[] { 1, "Plain Pizza", 10m });
+                columns: new[] { "FoodId", "Description", "Name", "Price" },
+                values: new object[] { 1, "Homemade pizza sauce, Mozzarella cheese, Parmesan cheese", "Plain Pizza", 10m });
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Name", "Price" },
-                values: new object[] { 2, "Pepperoni Pizza", 14.99m });
+                columns: new[] { "FoodId", "Description", "Name", "Price" },
+                values: new object[] { 2, "Pepperoni, Tomatoes, Paprika, Chili, Mozzarella, Parmesan", "Pepperoni Pizza", 14.99m });
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Name", "Price" },
-                values: new object[] { 3, "Pizza with Salami and Olives", 15.99m });
+                columns: new[] { "FoodId", "Description", "Name", "Price" },
+                values: new object[] { 3, "Salami, Olives, Bell pepper, Mushrooms, Mozzarella, Parmesan", "Pizza with Salami and Olives", 15.99m });
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Name", "Price" },
-                values: new object[] { 4, "Quattro Pizza Formaggi", 14.99m });
+                columns: new[] { "FoodId", "Description", "Name", "Price" },
+                values: new object[] { 4, "Broccoli, Mushrooms, Bell pepper, Corn, Onion, Mozzarella, Parmesan", "Veggie Pizza", 14.99m });
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Name", "Price" },
-                values: new object[] { 5, "Margherita Pizza", 10.99m });
+                columns: new[] { "FoodId", "Description", "Name", "Price" },
+                values: new object[] { 5, "Mozzarella, Parmesan, Basil, Fresh tomatoes, Tomato sauce", "Margherita Pizza", 10.99m });
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Name", "Price" },
-                values: new object[] { 6, "Pizza with Minced Meat", 15.99m });
+                columns: new[] { "FoodId", "Description", "Name", "Price" },
+                values: new object[] { 6, "Minced meat, Bacon, Jalapeño, Mozzarella, Parmesan, Olives, Tomatoes", "Pizza with Minced Meat", 15.99m });
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Name", "Price" },
-                values: new object[] { 7, "Hot Salami Pizza", 14.99m });
+                columns: new[] { "FoodId", "Description", "Name", "Price" },
+                values: new object[] { 7, "Salami, Chilli, Jalapeño, Mozzarella, Parmesan, Tomato sauce", "Hot Salami Pizza", 14.99m });
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Name", "Price" },
-                values: new object[] { 8, "Pizza with Grilled Meat", 16.99m });
+                columns: new[] { "FoodId", "Description", "Name", "Price" },
+                values: new object[] { 8, "Grilled meat, Tomatoes, Bell pepper, Onion, Mozzarella, Parmesan", "Pizza with Grilled Meat", 16.99m });
 
             migrationBuilder.InsertData(
                 table: "Reservations",

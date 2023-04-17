@@ -11,8 +11,13 @@ namespace RestaurantWebsite.Models
         public string? Name { get; set; }
 
         [Required(ErrorMessage = "Please enter the item's price.")]
-        [Range(0.00, 150.55, ErrorMessage = "Price must be between 0.25 and 10.50 ")]
+        [Range(0.00, 200.50, ErrorMessage = "Price must be between 0 and 200.50 ")]
         public decimal? Price { get; set; }
+
+        [Required(ErrorMessage = "Please enter a description.")]
+        public string? Description { get; set; }
+
+
 
         public string Slug
         {
