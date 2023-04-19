@@ -4,68 +4,60 @@ using System.Reflection.Emit;
 
 namespace RestaurantWebsite.Models
 {
-    internal class SeedFood : IEntityTypeConfiguration<Food>
+    internal class SeedImage : IEntityTypeConfiguration<Image>
     {
-        public void Configure(EntityTypeBuilder<Food> entity)
+        public void Configure(EntityTypeBuilder<Image> entity)
         {
             entity.HasData(
 
-                new Food
+                new Image
                 {
-                    FoodId = 1,
-                    Name = "Plain Pizza",
-                    Price = (decimal)10.00,
-                    Description = "Homemade pizza sauce, Mozzarella cheese, Parmesan cheese"
+                    ImageId = 1,
+                    ImageName = "Plain Pizza",
+                    FileName = "plain_pizza.jpg"
                 },
 
-                new Food
+                new Image
                 {
-                    FoodId = 2,
-                    Name = "Pepperoni Pizza",
-                    Price = (decimal)14.99,
-                    Description = "Pepperoni, Tomatoes, Paprika, Chili, Mozzarella, Parmesan"
+                    ImageId = 2,
+                    ImageName = "Pepperoni Pizza",
+                    FileName = "pepperoni_pizza.jpg"
                 },
-                new Food
+                new Image
                 {
-                    FoodId = 3,
-                    Name = "Pizza with Salami and Olives",
-                    Price = (decimal)15.99,
-                    Description = "Salami, Olives, Bell pepper, Mushrooms, Mozzarella, Parmesan"
+                    ImageId = 3,
+                    ImageName = "Pizza with Salami and Olives",
+                    FileName = "pizza_with_salami_and_olives.jpg"
                 },
-                new Food
+                new Image
                 {
-                    FoodId = 4,
-                    Name = "Veggie Pizza",
-                    Price = (decimal)14.99,
-                    Description = "Broccoli, Mushrooms, Bell pepper, Corn, Onion, Mozzarella, Parmesan"
+                    ImageId = 4,
+                    ImageName = "Veggie Pizza",
+                    FileName = "veggie_pizza.jpg"
                 },
-                new Food
+                new Image
                 {
-                    FoodId = 5,
-                    Name = "Margherita Pizza",
-                    Price = (decimal)10.99,
-                    Description = "Mozzarella, Parmesan, Basil, Fresh tomatoes, Tomato sauce"
+                    ImageId = 5,
+                    ImageName = "Margherita Pizza",
+                    FileName = "margherita_pizza.jpg"
                 },
-                new Food
+                new Image
                 {
-                    FoodId = 6,
-                    Name = "Pizza with Minced Meat",
-                    Price = (decimal)15.99,
-                    Description = "Minced meat, Bacon, Jalapeño, Mozzarella, Parmesan, Olives, Tomatoes"
+                    ImageId = 6,
+                    ImageName = "Pizza with Minced Meat",
+                    FileName = "pizza_with_minced_meat.jpg"
                 },
-                new Food
+                new Image
                 {
-                    FoodId = 7,
-                    Name = "Hot Salami Pizza",
-                    Price = (decimal)14.99,
-                    Description = "Salami, Chilli, Jalapeño, Mozzarella, Parmesan, Tomato sauce"
+                    ImageId = 7,
+                    ImageName = "Hot Salami Pizza",
+                    FileName = "hot_salami_pizza.jpg"
                 },
-                new Food
+                new Image
                 {
-                    FoodId = 8,
-                    Name = "Pizza with Grilled Meat",
-                    Price = (decimal)16.99,
-                    Description = "Grilled meat, Tomatoes, Bell pepper, Onion, Mozzarella, Parmesan"
+                    ImageId = 8,
+                    ImageName = "Pizza with Grilled Meat",
+                    FileName = "pizza_with_grilled_meat.jpg"
                 }
             );
 

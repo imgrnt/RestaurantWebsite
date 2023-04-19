@@ -22,9 +22,20 @@ namespace RestaurantWebsite.Controllers
         [HttpGet]
         public IActionResult MenuList()
         {
-            var food = context.Foods
-            .OrderBy(c => c.FoodId).ToList();
-            return View(food);
+            var images = context.Images.OrderBy(c => c.ImageId).ToList();
+
+            List<Food> foods;
+
+
+            foods = context.Foods
+                .OrderBy(c => c.FoodId).ToList();
+
+            // use ViewBag to pass data to view
+            ViewBag.Images = images;
+            //ViewBag.SelectedImageName = id;
+
+
+            return View(foods);
         }
 
 

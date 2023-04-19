@@ -11,8 +11,8 @@ using RestaurantWebsite.Models;
 namespace RestaurantWebsite.Migrations
 {
     [DbContext(typeof(RestaurantContext))]
-    [Migration("20230417230516_Initial")]
-    partial class Initial
+    [Migration("20230418031654_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,6 +29,9 @@ namespace RestaurantWebsite.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("ImageId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -39,6 +42,8 @@ namespace RestaurantWebsite.Migrations
 
                     b.HasKey("FoodId");
 
+                    b.HasIndex("ImageId");
+
                     b.ToTable("Foods");
 
                     b.HasData(
@@ -46,6 +51,7 @@ namespace RestaurantWebsite.Migrations
                         {
                             FoodId = 1,
                             Description = "Homemade pizza sauce, Mozzarella cheese, Parmesan cheese",
+                            ImageId = 1,
                             Name = "Plain Pizza",
                             Price = 10m
                         },
@@ -53,6 +59,7 @@ namespace RestaurantWebsite.Migrations
                         {
                             FoodId = 2,
                             Description = "Pepperoni, Tomatoes, Paprika, Chili, Mozzarella, Parmesan",
+                            ImageId = 2,
                             Name = "Pepperoni Pizza",
                             Price = 14.99m
                         },
@@ -60,6 +67,7 @@ namespace RestaurantWebsite.Migrations
                         {
                             FoodId = 3,
                             Description = "Salami, Olives, Bell pepper, Mushrooms, Mozzarella, Parmesan",
+                            ImageId = 3,
                             Name = "Pizza with Salami and Olives",
                             Price = 15.99m
                         },
@@ -67,6 +75,7 @@ namespace RestaurantWebsite.Migrations
                         {
                             FoodId = 4,
                             Description = "Broccoli, Mushrooms, Bell pepper, Corn, Onion, Mozzarella, Parmesan",
+                            ImageId = 4,
                             Name = "Veggie Pizza",
                             Price = 14.99m
                         },
@@ -74,6 +83,7 @@ namespace RestaurantWebsite.Migrations
                         {
                             FoodId = 5,
                             Description = "Mozzarella, Parmesan, Basil, Fresh tomatoes, Tomato sauce",
+                            ImageId = 5,
                             Name = "Margherita Pizza",
                             Price = 10.99m
                         },
@@ -81,6 +91,7 @@ namespace RestaurantWebsite.Migrations
                         {
                             FoodId = 6,
                             Description = "Minced meat, Bacon, Jalapeño, Mozzarella, Parmesan, Olives, Tomatoes",
+                            ImageId = 6,
                             Name = "Pizza with Minced Meat",
                             Price = 15.99m
                         },
@@ -88,6 +99,7 @@ namespace RestaurantWebsite.Migrations
                         {
                             FoodId = 7,
                             Description = "Salami, Chilli, Jalapeño, Mozzarella, Parmesan, Tomato sauce",
+                            ImageId = 7,
                             Name = "Hot Salami Pizza",
                             Price = 14.99m
                         },
@@ -95,8 +107,77 @@ namespace RestaurantWebsite.Migrations
                         {
                             FoodId = 8,
                             Description = "Grilled meat, Tomatoes, Bell pepper, Onion, Mozzarella, Parmesan",
+                            ImageId = 8,
                             Name = "Pizza with Grilled Meat",
                             Price = 16.99m
+                        });
+                });
+
+            modelBuilder.Entity("RestaurantWebsite.Models.Image", b =>
+                {
+                    b.Property<int>("ImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ImageId");
+
+                    b.ToTable("Images");
+
+                    b.HasData(
+                        new
+                        {
+                            ImageId = 1,
+                            FileName = "plain_pizza.jpg",
+                            ImageName = "Plain Pizza"
+                        },
+                        new
+                        {
+                            ImageId = 2,
+                            FileName = "pepperoni_pizza.jpg",
+                            ImageName = "Pepperoni Pizza"
+                        },
+                        new
+                        {
+                            ImageId = 3,
+                            FileName = "pizza_with_salami_and_olives.jpg",
+                            ImageName = "Pizza with Salami and Olives"
+                        },
+                        new
+                        {
+                            ImageId = 4,
+                            FileName = "veggie_pizza.jpg",
+                            ImageName = "Veggie Pizza"
+                        },
+                        new
+                        {
+                            ImageId = 5,
+                            FileName = "margherita_pizza.jpg",
+                            ImageName = "Margherita Pizza"
+                        },
+                        new
+                        {
+                            ImageId = 6,
+                            FileName = "pizza_with_minced_meat.jpg",
+                            ImageName = "Pizza with Minced Meat"
+                        },
+                        new
+                        {
+                            ImageId = 7,
+                            FileName = "hot_salami_pizza.jpg",
+                            ImageName = "Hot Salami Pizza"
+                        },
+                        new
+                        {
+                            ImageId = 8,
+                            FileName = "pizza_with_grilled_meat.jpg",
+                            ImageName = "Pizza with Grilled Meat"
                         });
                 });
 
@@ -178,6 +259,22 @@ namespace RestaurantWebsite.Migrations
                             ReserveDate = new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ReserveTime = "5:30 PM"
                         });
+                });
+
+            modelBuilder.Entity("RestaurantWebsite.Models.Food", b =>
+                {
+                    b.HasOne("RestaurantWebsite.Models.Image", "Image")
+                        .WithMany("Foods")
+                        .HasForeignKey("ImageId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Image");
+                });
+
+            modelBuilder.Entity("RestaurantWebsite.Models.Image", b =>
+                {
+                    b.Navigation("Foods");
                 });
 #pragma warning restore 612, 618
         }

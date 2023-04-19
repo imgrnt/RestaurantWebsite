@@ -4,90 +4,94 @@ using RestaurantWebsite.Models;
 namespace RestaurantWebsite.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class MenuController : Controller
+    public class ImageController : Controller
     {
         private RestaurantContext context { get; set; }
 
-        public MenuController(RestaurantContext ctx)
+        private readonly IWebHostEnvironment WebHostEnvironment;
+
+
+
+        public ImageController(RestaurantContext ctx, IWebHostEnvironment webHostEnvironment)
         {
             context = ctx;
+            WebHostEnvironment = webHostEnvironment;
         }
 
-
-        // GET: MenuController
+        // GET: ImageController
         [HttpGet]
         public IActionResult Index()
         {
-            return RedirectToAction("MenuList");
+            return RedirectToAction("ImageList");
         }
 
 
-        // GET: MenuController/MenuList
+        // GET: ImageController/ImageList
         [HttpGet]
-        public IActionResult MenuList()
+        public IActionResult ImageList()
         {
-            var food = context.Foods
-            .OrderBy(c => c.FoodId).ToList();
-            return View(food);
+            var items = context.Images.ToList();
+            return View(items);
         }
 
-        // GET: MenuController/Add
+        // GET: ImageController/Create
         [HttpGet]
-        public IActionResult Add()
+        public IActionResult Create()
         {
-            ViewBag.Action = "Add";
-            return View("AddUpdate", new Food());
+
+            return View();
         }
 
-        // GET: MenuController/Update
-        [HttpGet]
-        public IActionResult Update(int id)
-        {
-            ViewBag.Action = "Update";
-            var food = context.Foods.Find(id);
-            return View("AddUpdate", food);
-        }
-
-        // POST: MenuController/Update
+        // POST: ImageController/Create
         [HttpPost]
-        public IActionResult Update(Food item)
+        public IActionResult Create(ImageViewModel vm)
         {
-            if (ModelState.IsValid)
+            string stringFileName = UploadFile(vm);
+            var image = new Image
             {
-                if (item.FoodId== 0)
-                {
-                    context.Foods.Add(item);
-                }
-                else
-                {
-                    context.Foods.Update(item);
-                }
-                context.SaveChanges();
-                return RedirectToAction("MenuList");
-            }
-            else
-            {
-                ViewBag.Action = (item.FoodId == 0) ? "Add" : "Update";
-                return View("AddUpdate");
+                ImageName = vm.ImageName,
+                FileName = stringFileName
+            };
 
-            }
-        }
-
-        // GET: MenuController/Delete
-        [HttpGet]
-        public IActionResult Delete(int id)
-        {
-            var item = context.Foods.Find(id);
-            return View(item);
-        }
-
-        // POST: MenuController/Delete
-        [HttpPost]
-        public IActionResult Delete(Food item)
-        {
-            context.Foods.Remove(item);
+            context.Images.Add(image);
             context.SaveChanges();
-            return RedirectToAction("MenuList");
+
+            return RedirectToAction("Index");
+        }
+
+        private string UploadFile(ImageViewModel vm)
+        {
+            string fileName = null;
+            if(vm.FileName!=null)
+            {
+                string uploadDir = Path.Combine(WebHostEnvironment.WebRootPath, "Images");
+                fileName = Guid.NewGuid().ToString() + "-" + vm.FileName.FileName;
+                string filePath = Path.Combine(uploadDir, fileName);
+                using(var fileStream = new FileStream(filePath,FileMode.Create))
+                {
+                    vm.FileName.CopyTo(fileStream);
+                }
+
+            }
+            return fileName;
+
         }
     }
 }
+
+
+/*
+ * 
+ * 
+ * 
+
+
+            var images = new List<string>();
+            var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, "wwwroot", "images");
+
+            foreach (var file in Directory.GetFiles(imagePath))
+            {
+                images.Add($"~/wwwroot/images/{Path.GetFileName(file)}");
+            }
+
+ */

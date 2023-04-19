@@ -8,6 +8,7 @@ namespace RestaurantWebsite.Models
 
         public DbSet<Food> Foods { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Image> Images { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) // Configure entity classes
@@ -16,6 +17,7 @@ namespace RestaurantWebsite.Models
             // Apply the configuration classes and seed initial data
             modelBuilder.ApplyConfiguration(new SeedFood());
             modelBuilder.ApplyConfiguration(new SeedReservation());
+            modelBuilder.ApplyConfiguration(new SeedImage());
 
         }
     }

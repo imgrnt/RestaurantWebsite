@@ -14,6 +14,11 @@ namespace RestaurantWebsite.Models
         [Range(0.00, 200.50, ErrorMessage = "Price must be between 0 and 200.50 ")]
         public decimal? Price { get; set; }
 
+
+        [Required(ErrorMessage = "Please select an image.")]
+        public int ImageId { get; set; }  // foreign key property
+        public Image Image { get; set; }     //reference navigation property, which contains a reference to a single related entity
+
         [Required(ErrorMessage = "Please enter a description.")]
         public string? Description { get; set; }
 
