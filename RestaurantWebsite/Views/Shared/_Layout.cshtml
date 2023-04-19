@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RestaurantWebsite.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="aos-by-red.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
@@ -47,7 +49,14 @@
             @RenderBody()
         </main>
     </div>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js">
+    </script>
+    <script>
+        AOS.init({
+            duration: 3000,
+            once: false,
+        });
+    </script>
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - KPIzza - <a asp-area="" asp-controller="Account" asp-action="LogIn">Admin(Now implemented, at a basic stage)</a>
