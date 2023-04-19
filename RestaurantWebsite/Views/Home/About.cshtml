@@ -4,18 +4,19 @@
 <h1>@ViewData["Title"]</h1>
 
 <div class="container padding-64 red grayscale xlarge" id="about">
-    <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white" style="background-image: url('https://amblerpizza.com/wp-content/uploads/2021/02/rebeccabarger187.jpg');" height: 100vh>
-        <h1 class="center jumbo" style="margin-bottom:64px">How we came about</h1>
-        <p2>
+    <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white" data-aos="fade-up" style="background-image: url('https://amblerpizza.com/wp-content/uploads/2021/02/rebeccabarger187.jpg');" height: 100vh>
+        <h1 class="center jumbo" data-aos="slide-right" style="margin-bottom:64px">How we came about</h1>
+        <p data-aos="slide-right">
             The KPIzza was founded in Philadelphia by Ithan, when he mentioned he wanted some good pizza, but was unable to get any, as all the pizza places around here sucked.
             So, in his infinite wisdom, he involved the two of us, Kevin and Peter, and together, we set out on our quest to create the best pizza one can ever taste.
-        </p2>
+        </p>
     </div>
 </div>
 <br />
 <br />
 
-<table class="table table-borderless table-hover table-primary">
+<table class="table table-borderless table-hover table-primary" data-aos="fade-up">
+ 
     <thead class="table-dark">
         <tr>
             <th scope="col">Hours</th>
@@ -53,4 +54,64 @@
         </tr>
     </tbody>
 </table>
-</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="bootstrap/css/font-awesome.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.js" async></script>
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1 data-aos="fade-up" data-aos-anchor-placement="top-center">Meet Your Chefs</h1>
+    <div class="m-5">
+        <div class="grid">
+            <div class="row">
+                <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-primary text-white">
+                            <img src="~/images/mexican.jpg" height="100" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <p class="h3">Ithan Sandoval-Lorenzo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-primary text-white">
+                            <img src="~/images/viet.jpg" height="100" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <p class="h3">Kevin Nguyen</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-primary text-white">
+                            <img src="~/images/jungle.jpg" height="100" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <p class="h3">Peter Hoang</p>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
