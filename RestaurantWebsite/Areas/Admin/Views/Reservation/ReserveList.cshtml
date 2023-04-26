@@ -37,10 +37,15 @@
                         <td>@reservation.Note</td>
 
                         <td>
+                            <a asp-action="Update"
+                               asp-route-id="@reservation.Id"
+                               
+                               class="btn btn-primary">Edit</a>
+
 
                             <a asp-action="Delete"
-                           asp-route-id="@reservation.Id"
-                           class="btn btn-danger">Delete</a>
+                               asp-route-id="@reservation.Id"
+                               class="btn btn-danger">Delete</a>
 
                         </td>
 
