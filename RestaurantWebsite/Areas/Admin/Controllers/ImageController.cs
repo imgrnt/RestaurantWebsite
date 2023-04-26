@@ -10,8 +10,6 @@ namespace RestaurantWebsite.Areas.Admin.Controllers
 
         private readonly IWebHostEnvironment WebHostEnvironment;
 
-
-
         public ImageController(RestaurantContext ctx, IWebHostEnvironment webHostEnvironment)
         {
             context = ctx;
@@ -76,6 +74,21 @@ namespace RestaurantWebsite.Areas.Admin.Controllers
             return fileName;
 
         }
+
+
+
+        // GET: ImageController/Edit
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            ViewBag.Action = "Update";
+            var image = context.Images.Find(id);
+            return View("Edit", image);
+        }
+
+
+
+
     }
 }
 

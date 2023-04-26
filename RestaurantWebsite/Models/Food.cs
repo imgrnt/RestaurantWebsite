@@ -17,7 +17,9 @@ namespace RestaurantWebsite.Models
 
         [Required(ErrorMessage = "Please select an image.")]
         public int ImageId { get; set; }  // foreign key property
-        public Image Image { get; set; }     //reference navigation property, which contains a reference to a single related entity
+
+
+        public Image? Image { get; set; }    //reference navigation property, which contains a reference to a single related entity
 
         [Required(ErrorMessage = "Please enter a description.")]
         public string? Description { get; set; }
