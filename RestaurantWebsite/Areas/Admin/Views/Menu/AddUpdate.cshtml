@@ -22,9 +22,24 @@
     <div class="form-group">
         <label asp-for="Description">Description:</label>
         <input asp-for="Description" class="form-control">
+    </div>Handmade dough straight from the mother land
+
+    <div class="form-group">
+        <label asp-for="ImageId">Image</label>
+        <select asp-for="ImageId" class="form-control">
+            <option value=""> select a genre</option>
+            @foreach (Image g in ViewBag.Images)
+            {
+                <option value="@g.ImageId">
+                    @g.ImageName
+                </option>
+            }
+        </select>
     </div>
 
-    <input type="hidden" asp-for="ImageId" />
+
+
+
     <input type="hidden" asp-for="FoodId" />
 
     <button type="submit" class="btn btn-primary">@ViewBag.Action</button>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RestaurantWebsite.Models;
 
 namespace RestaurantWebsite.Areas.Admin.Controllers
@@ -7,10 +8,14 @@ namespace RestaurantWebsite.Areas.Admin.Controllers
     public class MenuController : Controller
     {
         private RestaurantContext context { get; set; }
+        private List<Image> images;
 
         public MenuController(RestaurantContext ctx)
         {
             context = ctx;
+            images = context.Images
+        .OrderBy(c => c.ImageId)
+        .ToList();
         }
 
 
@@ -43,8 +48,15 @@ namespace RestaurantWebsite.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
+            // get Product object for specified primary key
+            Food food = context.Foods.Include(p => p.Image).FirstOrDefault(p => p.FoodId == id);
+
+
+
+
             ViewBag.Action = "Update";
-            var food = context.Foods.Find(id);
+            ViewBag.Images = images;
+            //var food = context.Foods.Find(id);
             return View("AddUpdate", food);
         }
 
