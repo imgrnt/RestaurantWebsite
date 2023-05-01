@@ -7,10 +7,21 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RestaurantWebsite.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="aos-by-red.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.scss">
 </head>
+<style>
+    body {
+        background-image: url("https://images.wallpaperscraft.com/image/single/evening_table_dinner_48367_1920x1080.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 sticky-top bg-body-tertiary " style="background-color: #e3f2fd;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">KPIzza </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -21,16 +32,20 @@
 
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-primary" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                         </li>
                         <li class="nav-item">
+
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Menu">Menu</a>
+
                             <a class="nav-link text-danger" asp-area="" asp-controller="Menu" asp-action="Index">Menu</a>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-warning" asp-area="" asp-controller="Home" asp-action="Reserve">Reservation</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Reserve">Reservation</a>
                         </li>
                     </ul>
 
@@ -47,12 +62,19 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
+    <script src="https://unpkg.com/aos@next/dist/aos.js">
+    </script>
+    <script>
+        AOS.init({
+            duration: 3000,
+            once: false,
+        });
+    </script>
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
             &copy; 2023 - KPIzza - <a asp-area="" asp-controller="Account" asp-action="LogIn">Admin(Now implemented, at a basic stage)</a>
         </div>
-    </footer>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

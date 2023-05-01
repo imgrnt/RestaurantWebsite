@@ -2,12 +2,12 @@
 @{
     ViewData["Title"] = "Reservations";
 }
-<h2>Make Reservation</h2>
+<h2 data-aos="fade-right" style="color:white;">Make Reservation</h2>
 
 <div asp-validation-summary="All" class="text-danger"></div>
 
 <form asp-action="Reserve" method="post">
-
+    <div class="col-md-6 bg-light" data-aos="fade-up">
     <div class="form-group">
         <label asp-for="Fname">First Name:</label>
         <input type="text" asp-for="Fname" class="form-control">
@@ -50,4 +50,5 @@
 
     <button type="submit" class="btn btn-primary">Reserve</button>
     <a asp-action="Index" class="btn btn-primary">Cancel</a>
+    </div>
 </form>
