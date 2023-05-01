@@ -1,0 +1,63 @@
+﻿@model IEnumerable<RestaurantWebsite.Models.Image>
+@{
+
+    Layout = "_MainLayout";
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action ="Create">Create New </a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ImageId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ImageName)
+                    </td>
+                    <td>
+                        <img src="~/Images/@item.FileName" class="rounded-circle" width="40" height="40" asp-append-version="true" />
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id = item.PrimaryKey */}) |
+                        @Html.ActionLink("Details", "Details", new { /* id = item.PrimaryKey */}) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id = item.PrimaryKey */})
+
+                    </td>
+
+                </tr>
+
+
+
+                }
+    </tbody>
+
+
+</table>
+
+
+
+<div>
+    <a asp-action="Index"> Back to List</a>
+</div>
