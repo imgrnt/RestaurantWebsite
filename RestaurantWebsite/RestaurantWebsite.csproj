@@ -26,9 +26,15 @@
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Views\Account\" />
     <None Remove="Areas\Admin\Views\Reservation\" />
+    <None Remove="Models\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Account\" />
     <Folder Include="Areas\Admin\Views\Reservation\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="Models\ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\" />
   </ItemGroup>
 </Project>

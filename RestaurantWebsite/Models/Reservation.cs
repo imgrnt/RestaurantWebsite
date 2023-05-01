@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace RestaurantWebsite.Models
 {
@@ -33,10 +34,23 @@ namespace RestaurantWebsite.Models
         public string ReserveTime { get; set; }
 
         [Required(ErrorMessage = "Please the number of people")]
-        public int? People { get; set; }
+        public int People { get; set; }
 
         [Required(ErrorMessage = "Please enter any notes.")]
         public string Note { get; set; }
+
+
+        public string Slug
+        {
+            get
+            {
+                if (Fname == null)
+                    return "";
+                else
+                    return Fname.Replace(' ', '-') + '-' + Lname.Replace(' ', '-');
+            }
+        }
+
 
 
     }
