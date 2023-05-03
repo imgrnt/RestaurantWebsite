@@ -13,7 +13,7 @@ namespace RestaurantWebsite.Models
         [Required(ErrorMessage = "Please enter an image name.")]
         public string? ImageName { get; set; }
         public string? FileName { get; set; }
-        public List<Food> Foods { get; set; } //collection navigation property, which includes references to many related entities.
+        public List<Food>? Foods { get; set; } //collection navigation property, which includes references to many related entities.
 
 
         public string Slug

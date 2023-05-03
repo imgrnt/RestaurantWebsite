@@ -77,15 +77,34 @@ namespace RestaurantWebsite.Areas.Admin.Controllers
 
 
 
-        // GET: ImageController/Edit
+        // GET: ImageController/Update
         [HttpGet]
-        public IActionResult Edit(int id)
+        public IActionResult Update(int id)
         {
             ViewBag.Action = "Update";
             var image = context.Images.Find(id);
-            return View("Edit", image);
+            return View("Update", image);
         }
 
+
+        [HttpPost]
+        public IActionResult Update(Image image)
+        {
+            if (ModelState.IsValid)
+            {
+                
+                context.Images.Update(image);
+                
+                context.SaveChanges();
+                return RedirectToAction("ImageList");
+            }
+            else
+            {
+                ViewBag.Action = (image.ImageId == 0) ? "Add" : "Update";
+                return View("Update");
+
+            }
+        }
 
 
 
