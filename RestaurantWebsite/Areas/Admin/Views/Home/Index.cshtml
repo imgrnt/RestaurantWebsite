@@ -21,4 +21,41 @@
             </p>
         </div>
     </div>
+    <input type="button" id="btn" value="Jump" style="margin:auto; width:50%; border: 5px red"/>
+    <img src="~/images/gigabenito.png" id="img" style="position:absolute; width:120px; left:50px;" />
 </div>
+
+<script type="text/javascript">
+    let t = 0;
+    let delta = 10;
+
+    let pageWidth = parseInt(window.innerWidth);
+
+    let timer;
+
+    document.getElementById("btn").addEventListener("click", Start);
+
+    function Start() {
+        if (document.getElementById("btn").value == "Jump") {
+            timer = setInterval("count()", 20);
+            document.getElementById("btn").value = "No jump";
+        } else {
+            document.getElementById("btn").value = "Jump";
+            clearInterval(timer);
+        }
+    }
+    function count() {
+        t++;
+        let unit = parseInt(document.getElementById("img").style.left);
+        unit += delta;
+        document.getElementById("img").style.left = unit + "px";
+        if (unit > pageWidth) {
+            delta = -10;
+        } else if (unit < -(pageWidth)) {
+            delta = 10;
+        }
+        let mytop = 300 - 100 * Math.abs(Math.cos(0.1 * t));
+        document.getElementById("img").style.top = mytop + "px";
+    }
+
+</script>
