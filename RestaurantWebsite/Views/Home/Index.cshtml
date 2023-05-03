@@ -2,52 +2,135 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4" style="color:white" data-aos="fade-right">Welcome to KPIzza.</h1>
-    <h2 class="display-4" style="color:white" data-aos="fade-right">Home to the best Pizza ever!</h2>
-    <br />
-    <img class="img-fluid rounded w-100" src="~/images/gigabenito.png" class="center" data-aos="fade-up" />
-</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+        .card-hover {
+        transition: transform 0.2s ease-out;
+    }
 
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+
+
+    main.cards {
+        display: flex;
+        padding: 32px;
+    }
+
+    main.cards section.card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: rgb(33, 37, 41);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        max-height: 468px;
+        margin-left: 32px;
+    }
+
+    main.cards section.card:first-child {
+        margin-left: 0;
+    }
+
+    main.cards section.card .icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    main.cards section.card img {
+        width: 100%;
+    }
+
+    main.cards section.card h3 {
+        font-size: 100%;
+        margin: 16px 0;
+    }
+
+    main.cards section.card span {
+        font-weight: 300;
+        max-width: 240px;
+        font-size: 80%;
+        margin-bottom: 16px;
+    }
+
+    main.cards section.card button {
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        border-radius: 32px;
+        border: 0;
+        cursor: pointer;
+        font-size: 80%;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 16px 0;
+    }
+
+</style>
 <body>
-
+    <div class="text-center">
+        <h1 class="display-4" style="color:white" data-aos="fade-right">Welcome to KPIzza.</h1>
+        <h2 class="display-4" style="color:white" data-aos="fade-right">Home to the best Pizza ever!</h2>
+        <br />
+        <img src="~/images/gigabenito.png" class="center" data-aos="fade-up" />
+    </div>
+    <main class="cards">
+        <section class="card contact" data-aos="fade-up">
+            <div class="icon card-hover">
+                <img src="~/images/house-solid.svg" alt="Contact us.">
+            </div>
+            <h3 style="color:white">About us.</h3>
+            <span style="color:white">Explore our opening hours and learn more about us.</span>
+            <div class="nav-item card-hover">
+                <a class="nav-link btn btn-outline-primary" asp-area="" asp-controller="Home" asp-action="About">Learn More</a>
+            </div>
+        </section>
+        <section class="card contact" data-aos="fade-up">
+            <div class="icon card-hover">
+                <img src="~/images/book-solid.svg" alt="Shop here.">
+            </div>
+            <h3 style="color:white">Our menu.</h3>
+            <span style="color:white">Browse our menu and see all of our delicious offerings.</span>
+            <div class="nav-item card-hover">
+                <a class="nav-link btn btn-outline-primary" asp-area="" asp-controller="Menu" asp-action="Index">Learn More</a>
+            </div>
+        </section>
+        <section class="card contact" data-aos="fade-up">
+            <div class="icon card-hover">
+                <img src="~/images/calendar-days-regular.svg" alt="About us.">
+            </div>
+            <h3 style="color:white">Reservation.</h3>
+            <span style="color:white">Save yourself some time and make a reservation with us.</span>
+            <div class="nav-item card-hover">
+                <a class="nav-link btn btn-outline-primary" asp-area="" asp-controller="Home" asp-action="Reserve">Learn More</a>
+            </div>
+        </section>
+        <section class="card contact" data-aos="fade-up">
+            <div class="icon card-hover">
+                <img src="~/images/phone-solid.svg" alt="About us.">
+            </div>
+            <h3 style="color:white">Shop here.</h3>
+            <span style="color:white">Enjoy our food from the comfort of home by ordering out.</span>
+            <div class="nav-item card-hover">
+                <a class="nav-link btn btn-outline-primary" asp-area="" asp-controller="Home" asp-action="Shop">Learn More</a>
+             </div>
+        </section>
+    </main>
 </body>
-
-<script type="text/javascript">
-    let t = 0;
-    let delta = 10;
-
-    pageWidth = parseInt(window.innerWidth);
-
-    let timer;
-
-    document.getElementById("btnHop").addEventListener("click", Start);
-
-    function Start() {
-        if (document.getElementById("btnHop").value == "Start Hopping") {
-            timer = setInterval("count()", 20);
-            document.getElementById("btnHop").value = "Stop Hopping";
-        } else {
-            document.getElementById("btnHop").value = "Start Hopping";
-            clearInterval(timer);
-        }
-
-    }
-
-    function count() {
-        t++;
-        let unit = parseInt(document.getElementById("img").style.left);
-        unit += delta;
-        document.getElementById("img").style.left = unit + "px";
-        if (unit > pageWidth) {
-            document.getElementById("img").src = "bb2.gif";
-            delta = -10;
-        } else if (unit < -(pageWidth)) {
-            document.getElementById("img").src = "bb1.gif";
-            delta = 10;
-        }
-        let mytop = 300 - 100 * Math.abs(Math.cos(0.1 * t));
-        document.getElementById("img").style.top = mytop + "px";
-    }
-
-</script>
+</html>
