@@ -1,9 +1,11 @@
 ﻿@{
     ViewData["Title"] = "About";
 }
+
 <h1 style="color:white" >@ViewData["Title"]</h1>
 
-<div class="container padding-64 red grayscale xlarge" id="about">
+
+<div class="container padding-64 red grayscale xlarge" style="color:white" id="about">
     <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white" data-aos="fade-up" style="background-image: url('https://amblerpizza.com/wp-content/uploads/2021/02/rebeccabarger187.jpg');" height: 100vh>
         <h1 class="center jumbo" data-aos="slide-right" style="margin-bottom:64px">How we came about</h1>
         <p data-aos="slide-right">
@@ -71,6 +73,14 @@
         body {
             font-family: 'Ubuntu', sans-serif;
         }
+
+        .card-hover {
+            transition: transform 0.2s ease-out;
+        }
+
+            .card-hover:hover {
+                transform: translateY(-10px);
+            }
     </style>
     <title>Document</title>
 </head>
@@ -80,36 +90,36 @@
         <div class="grid">
             <div class="row">
                 <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
-                    <div class="card shadow-lg">
-                        <div class="card-header bg-primary text-white">
+                    <div class="card shadow-lg bg-dark card-hover">
+                        <div class="card-header bg-dark text-white">
                             <img src="~/images/mexican.jpg" height="100" alt="" class="img-fluid">
                         </div>
                         <div class="card-body">
-                            <p class="h3">Ithan Sandoval-Lorenzo</p>
+                            <p class="h3" style="color:white" align="center">Ithan Sandoval-Lorenzo</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
-                    <div class="card shadow-lg">
-                        <div class="card-header bg-primary text-white">
+                    <div class="card shadow-lg bg-dark card-hover">
+                        <div class="card-header bg-dark text-white">
                             <img src="~/images/viet.jpg" height="100" alt="" class="img-fluid">
                         </div>
                         <div class="card-body">
-                            <p class="h3">Kevin Nguyen</p>
+                            <p class="h3" style="color:white" align ="center">Kevin Nguyen</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
-                    <div class="card shadow-lg">
-                        <div class="card-header bg-primary text-white">
+                    <div class="card shadow-lg bg-dark card-hover">
+                        <div class="card-header bg-dark text-white">
                             <img src="~/images/jungle.jpg" height="100" alt="" class="img-fluid">
                         </div>
                         <div class="card-body">
-                            <p class="h3">Peter Hoang</p>                          
+                            <p class="h3" style="color:white" align="center">Peter Hoang</p>
                         </div>
                     </div>
                 </div>
-             </div>
+            </div>
         </div>
     </div>
 </body>

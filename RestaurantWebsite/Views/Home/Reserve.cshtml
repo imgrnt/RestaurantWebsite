@@ -6,45 +6,45 @@
 
 <div asp-validation-summary="All" class="text-danger"></div>
 
-<form asp-action="Reserve" method="post">
-    <div class="col-md-6 bg-light" data-aos="fade-up">
+<form asp-action="Reserve" method="post" style="background-color: transparent;">
+    <div class="col-md-6 bg-transparent" data-aos="fade-up">
     <div class="form-group">
-        <label asp-for="Fname">First Name:</label>
+            <label asp-for="Fname" style="color:white;">First Name:</label>
         <input type="text" asp-for="Fname" class="form-control">
     </div>
 
     <div class="form-group">
-        <label asp-for="Lname">Last Name:</label>
+            <label asp-for="Lname" style="color:white;">Last Name:</label>
         <input type="text" asp-for="Lname" class="form-control">
     </div>
 
     <div class="form-group">
-        <label asp-for="Email">Email:</label>
+            <label asp-for="Email" style="color:white;">Email:</label>
         <input type="email" asp-for="Email" class="form-control">
     </div>
 
     <div class="form-group">
-        <label asp-for="PhoneNumber">Phone Number:</label>
+            <label asp-for="PhoneNumber" style="color:white;">Phone Number:</label>
         <input type="number" asp-for="PhoneNumber" class="form-control">
     </div>
 
     <div class="form-group">
-        <label asp-for="ReserveDate">Reservation Date:</label>
+            <label asp-for="ReserveDate" style="color:white;">Reservation Date:</label>
         <input type="date" asp-for="ReserveDate" class="form-control">
     </div>
 
     <div class="form-group">
-        <label asp-for="ReserveTime">Reservation Time:</label>
+            <label asp-for="ReserveTime" style="color:white;">Reservation Time:</label>
         <input type="time" asp-for="ReserveTime" class="form-control">
     </div>
 
     <div class="form-group">
-        <label asp-for="People">What is group size:</label>
+            <label asp-for="People" style="color:white;">What is group size:</label>
         <input type="number" asp-for="People" class="form-control">
     </div>
 
     <div class="form-group">
-        <label asp-for="Note">Note:</label>
+            <label asp-for="Note" style="color:white;">Note:</label>
         <input type="text" asp-for="Note" class="form-control">
     </div>
 
