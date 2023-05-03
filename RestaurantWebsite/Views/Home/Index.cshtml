@@ -8,3 +8,46 @@
     <br />
     <img class="img-fluid rounded w-100" src="~/images/gigabenito.png" class="center" data-aos="fade-up" />
 </div>
+
+<body>
+
+</body>
+
+<script type="text/javascript">
+    let t = 0;
+    let delta = 10;
+
+    pageWidth = parseInt(window.innerWidth);
+
+    let timer;
+
+    document.getElementById("btnHop").addEventListener("click", Start);
+
+    function Start() {
+        if (document.getElementById("btnHop").value == "Start Hopping") {
+            timer = setInterval("count()", 20);
+            document.getElementById("btnHop").value = "Stop Hopping";
+        } else {
+            document.getElementById("btnHop").value = "Start Hopping";
+            clearInterval(timer);
+        }
+
+    }
+
+    function count() {
+        t++;
+        let unit = parseInt(document.getElementById("img").style.left);
+        unit += delta;
+        document.getElementById("img").style.left = unit + "px";
+        if (unit > pageWidth) {
+            document.getElementById("img").src = "bb2.gif";
+            delta = -10;
+        } else if (unit < -(pageWidth)) {
+            document.getElementById("img").src = "bb1.gif";
+            delta = 10;
+        }
+        let mytop = 300 - 100 * Math.abs(Math.cos(0.1 * t));
+        document.getElementById("img").style.top = mytop + "px";
+    }
+
+</script>
