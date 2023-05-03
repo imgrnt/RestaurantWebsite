@@ -41,6 +41,7 @@ namespace RestaurantWebsite.Areas.Admin.Controllers
         public IActionResult Add()
         {
             ViewBag.Action = "Add";
+            ViewBag.Images = images;
             return View("AddUpdate", new Food());
         }
 

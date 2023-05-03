@@ -40,9 +40,9 @@
                         <img src="~/Images/@item.FileName" class="rounded-circle" width="40" height="40" asp-append-version="true" />
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { /* id = item.PrimaryKey */}) |
-                        @Html.ActionLink("Details", "Details", new { /* id = item.PrimaryKey */}) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id = item.PrimaryKey */})
+                        @Html.ActionLink("Update", "Update", new { id = item.ImageId }) 
+                        <!--  Html.ActionLink("Details", "Details", new { /* id = item.PrimaryKey */}) | -->
+                        <!-- Html.ActionLink("Delete", "Delete", new { /* id = item.PrimaryKey */}) -->
 
                     </td>
 
@@ -58,6 +58,4 @@
 
 
 
-<div>
-    <a asp-action="Index"> Back to List</a>
-</div>
+
