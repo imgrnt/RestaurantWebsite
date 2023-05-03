@@ -71,6 +71,14 @@
         body {
             font-family: 'Ubuntu', sans-serif;
         }
+
+        .card-hover {
+            transition: transform 0.2s ease-out;
+        }
+
+            .card-hover:hover {
+                transform: translateY(-10px);
+            }
     </style>
     <title>Document</title>
 </head>
@@ -80,36 +88,36 @@
         <div class="grid">
             <div class="row">
                 <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
-                    <div class="card shadow-lg">
-                        <div class="card-header bg-primary text-white">
+                    <div class="card shadow-lg bg-dark card-hover">
+                        <div class="card-header bg-dark text-white">
                             <img src="~/images/mexican.jpg" height="100" alt="" class="img-fluid">
                         </div>
                         <div class="card-body">
-                            <p class="h3">Ithan Sandoval-Lorenzo</p>
+                            <p class="h3" style="color:white">Ithan Sandoval-Lorenzo</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
-                    <div class="card shadow-lg">
-                        <div class="card-header bg-primary text-white">
+                    <div class="card shadow-lg bg-dark card-hover">
+                        <div class="card-header bg-dark text-white">
                             <img src="~/images/viet.jpg" height="100" alt="" class="img-fluid">
                         </div>
                         <div class="card-body">
-                            <p class="h3">Kevin Nguyen</p>
+                            <p class="h3" style="color:white">Kevin Nguyen</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up">
-                    <div class="card shadow-lg">
-                        <div class="card-header bg-primary text-white">
+                    <div class="card shadow-lg bg-dark card-hover">
+                        <div class="card-header bg-dark text-white">
                             <img src="~/images/jungle.jpg" height="100" alt="" class="img-fluid">
                         </div>
                         <div class="card-body">
-                            <p class="h3">Peter Hoang</p>                          
+                            <p class="h3" style="color:white">Peter Hoang</p>
                         </div>
                     </div>
                 </div>
-             </div>
+            </div>
         </div>
     </div>
 </body>

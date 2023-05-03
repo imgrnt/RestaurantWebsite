@@ -18,6 +18,14 @@
         color: darkslateblue;
         font-size: 18px;
     }
+
+    .card-hover {
+        transition: transform 0.2s ease-out;
+    }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
 </style>
 
 
@@ -69,13 +77,13 @@
 
 
 <section class="container tab-content py-4 py-sm-5">
-    <h2 class="text-center pt-2 pt-sm-0 mb-sm-5">Pizza</h2>
+    <h2 class="text-center pt-2 pt-sm-0 mb-sm-5" style="color:white;">Pizza</h2>
     <div class="row pt-3 pt-sm-0">
         @foreach (var food in Model)
         {
             <!-- Item-->
             <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-                <div class="card product-card border pb-2 h-100">
+                <div class="card product-card border pb-2 h-100 bg-dark card-hover">
                     <a class="d-block" href="#quick-view1" data-bs-toggle="modal"><img class="card-img-top" src="~/images/@food.Image.FileName" alt="Pizza"></a>
                     <div class="card-body pt-1 pb-2">
                         <h3 class="product-title fs-md"><a href="#quick-view1" data-bs-toggle="modal">@food.Name</a></h3>
@@ -83,12 +91,13 @@
 
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="product-price">
-                                <span class="text-accent">@food.Price?.ToString("C2", culture)</span>
+                                <span class="fs-ms text-muted">@food.Price?.ToString("C2", culture)</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         }
     </div>
 </section>
